@@ -5,7 +5,7 @@ function Projects() {
   const projects = [
     {
       title: "E-Commerce Website",
-      image: "/ecommerce.png",
+      image: "/fashion.png",
       description:
         "Full Stack Fashion E-Commerce website with authentication, product management, shopping cart, checkout, order management, admin panel and responsive UI.",
       tech: [

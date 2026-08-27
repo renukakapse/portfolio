@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { IoSunnyOutline } from "react-icons/io5";
-import { FaMoon } from "react-icons/fa6";
-import { mContext } from '../context/Themecontext';
-import { Link } from 'react-router-dom';
-
-function Navbar(){
-  const {theme,setTheme,handleToggle}=mContext();
-  return (
-    
-    <div className='flex flex items-center justify-between px-2 py-2 h-15 bg-black bg-black text-black flex justify-between px-8 py-4 dark:bg-gray-800 dark:text-white'>
-      <div>
-       <img src='/logo.png'/>
-    </div>
-        <ul className='flex gap-5  text-white'>
-          <li className='hover:underline underline-offset-4 cursor-pointer text-white'><Link to="/">Home</Link></li>
-          <li className='hover:underline underline-offset-4 cursor-pointer text-white'><Link to="/about">About</Link></li>
-          <li className='hover:underline underline-offset-4 cursor-pointer text-white'><Link to="/experience">Experience</Link></li>
-          <li className='hover:underline underline-offset-4 cursor-pointer text-white'><Link to="/contact">Contact</Link></li>
-            <button onClick={handleToggle} className='bg-white text-black px-4 py-1 rounded dark:bg-gray-700 dark:text-white'>
-        {theme ?  <IoSunnyOutline className='text-black text-xl'/> :<FaMoon/>}</button>
-        </ul>
-        </div>
-    
-     
-  )
-}
-export default Navbar
-=======
 import React from "react";
 import { IoSunnyOutline } from "react-icons/io5";
 import { FaMoon } from "react-icons/fa6";
@@ -35,34 +5,59 @@ import { mContext } from "../context/Themecontext";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const { theme, setTheme, handleToggle } = mContext();
+  const { theme, handleToggle } = mContext();
+
   return (
-    <div className="flex items-center justify-between px-2 py-2 h-15 bg-black text-black dark:bg-gray-800 dark:text-white">
+    <nav className="flex items-center justify-between px-4 md:px-8 py-4 bg-black dark:bg-gray-800 text-white">
+      
+      {/* Logo */}
       <div>
-        <img src="/logo.png" />
+        <img
+          src="/logo.png"
+          alt="Renuka Kapse Logo"
+          className="w-12 h-12 object-contain"
+        />
       </div>
-      <ul className="flex gap-5  text-white">
-        <li className="hover:underline underline-offset-4 cursor-pointer text-white">
+
+      {/* Navigation */}
+      <ul className="flex items-center gap-4 md:gap-6 text-sm md:text-base">
+        <li className="hover:underline underline-offset-4 cursor-pointer">
           <Link to="/">Home</Link>
         </li>
-        <li className="hover:underline underline-offset-4 cursor-pointer text-white">
+
+        <li className="hover:underline underline-offset-4 cursor-pointer">
           <Link to="/about">About</Link>
         </li>
-        <li className="hover:underline underline-offset-4 cursor-pointer text-white">
+
+        <li className="hover:underline underline-offset-4 cursor-pointer">
           <Link to="/experience">Experience</Link>
         </li>
-        <li className="hover:underline underline-offset-4 cursor-pointer text-white">
+
+        <li className="hover:underline underline-offset-4 cursor-pointer">
+          <Link to="/projects">Projects</Link>
+        </li>
+
+        <li className="hover:underline underline-offset-4 cursor-pointer">
           <Link to="/contact">Contact</Link>
         </li>
-        <button
-          onClick={handleToggle}
-          className="bg-white text-black px-4 py-1 rounded"
-        >
-          {theme ? <FaMoon /> : <IoSunnyOutline />}
-        </button>
+
+        {/* Theme Toggle */}
+        <li>
+          <button
+            onClick={handleToggle}
+            className="bg-white text-black dark:bg-gray-700 dark:text-white px-3 py-2 rounded-lg transition"
+            aria-label="Toggle theme"
+          >
+            {theme ? (
+              <FaMoon className="text-lg" />
+            ) : (
+              <IoSunnyOutline className="text-lg" />
+            )}
+          </button>
+        </li>
       </ul>
-    </div>
+    </nav>
   );
 }
+
 export default Navbar;
->>>>>>> a8b75d03ab7250ef76a89e32c6b1bf1a9e1f6c96

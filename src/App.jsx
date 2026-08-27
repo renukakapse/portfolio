@@ -12,11 +12,7 @@ import Projects from "./pages/Projects";
 
 function App() {
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 min-h-screen">
-=======
-    <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 min-h-screen dark:bg-gray-900 dark:text-white">
->>>>>>> a8b75d03ab7250ef76a89e32c6b1bf1a9e1f6c96
       <Navbar />
 
       <Routes>
@@ -33,8 +29,4 @@ function App() {
   );
 }
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App;
->>>>>>> a8b75d03ab7250ef76a89e32c6b1bf1a9e1f6c96

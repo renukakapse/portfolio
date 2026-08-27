@@ -45,6 +45,20 @@ function Projects() {
       tech: ["React", "Tailwind CSS", "JavaScript"],
       github: "https://github.com/yourusername/beauty-products",
       live: "https://beauty-products-sp29.onrender.com",
+        "Full Stack E-Commerce website with authentication, product management, shopping cart and responsive UI.",
+      tech: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+      github: "https://github.com/yourusername/ecommerce",
+      live: "https://your-ecommerce.vercel.app",
+    },
+
+    {
+      title: "Tourism Website",
+      image: "/tourism.png",
+      description:
+        "Responsive tourism website showcasing destinations, festivals and travel information.",
+      tech: ["React", "Tailwind CSS", "JSON Server"],
+      github: "https://github.com/yourusername/tourism",
+      live: "https://your-tourism.vercel.app",
     },
 
     {
@@ -55,6 +69,10 @@ function Projects() {
       tech: ["React", "Tailwind CSS", "JavaScript"],
       github: "https://github.com/yourusername/portfolio",
       live: "https://portfolio-mvmg.onrender.com",
+        "Modern portfolio website with dark theme, routing and responsive design.",
+      tech: ["React", "Tailwind CSS"],
+      github: "https://github.com/yourusername/portfolio",
+      live: "https://your-portfolio.vercel.app",
     },
 
     {
@@ -65,6 +83,10 @@ function Projects() {
       tech: ["React", "CSS", "JavaScript"],
       github: "https://github.com/yourusername/todo",
       live: "https://todo-resg.onrender.com",
+        "Task management application with add, delete and complete task functionality.",
+      tech: ["React", "CSS", "JavaScript"],
+      github: "https://github.com/yourusername/todo",
+      live: "https://your-todo.vercel.app",
     },
 
     {
@@ -75,13 +97,27 @@ function Projects() {
       tech: ["React", "Tailwind CSS", "JavaScript"],
       github: "https://github.com/yourusername/pomodoro",
       live: "https://pomodoro-djsk.onrender.com",
+        "Productivity timer application based on Pomodoro technique with work and break sessions.",
+      tech: ["React", "Node.js", "Tailwind CSS"],
+      github: "https://github.com/yourusername/pomodoro",
+      live: "https://your-pomodoro.vercel.app",
+    },
+
+    {
+      title: "Weather App",
+      image: "/weather.png",
+      description:
+        "Real-time weather application using API integration and responsive UI.",
+      tech: ["React", "API", "Tailwind CSS"],
+      github: "https://github.com/yourusername/weather",
+      live: "https://your-weather.vercel.app",
+
     },
   ];
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 py-20 px-6">
       <div className="max-w-7xl mx-auto">
-
         {/* Heading */}
         <div className="text-center mb-16">
           <span className="bg-orange-500/20 text-orange-400 px-5 py-2 rounded-full">
@@ -105,8 +141,6 @@ function Projects() {
               key={index}
               className="bg-white rounded-3xl overflow-hidden shadow-xl hover:-translate-y-2 transition duration-300"
             >
-
-              {/* Project Image */}
               <img
                 src={project.image}
                 alt={project.title}
@@ -129,16 +163,31 @@ function Projects() {
                 </p>
 
                 {/* Tech Stack */}
+              <div className="p-6">
+
+                <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
+                  FULL STACK PROJECT
+                </span>
+
+                <h3 className="text-3xl font-bold mt-4 text-slate-800">
+                  {project.title}
+                </h3>
+
+                <p className="text-slate-600 mt-3">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 mt-5">
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
                       className="bg-slate-100 px-3 py-1 rounded-lg text-sm text-slate-700"
+                  className="bg-slate-100 px-3 py-1 rounded-lg text-sm"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
+
 
                 {/* Buttons */}
                 <div className="flex gap-4 mt-6">
@@ -146,8 +195,13 @@ function Projects() {
                   <a
                     href={project.github}
                     target="_blank"
+<<<<<<< HEAD
                     rel="noopener noreferrer"
                     className="flex-1 text-center border border-slate-300 py-3 rounded-xl font-semibold hover:bg-slate-100 transition"
+=======
+                    rel="noreferrer"
+                    className="flex-1 text-center border border-slate-300 py-3 rounded-xl font-semibold hover:bg-slate-100"
+>>>>>>> a8b75d03ab7250ef76a89e32c6b1bf1a9e1f6c96
                   >
                     Code
                   </a>
@@ -155,8 +209,13 @@ function Projects() {
                   <a
                     href={project.live}
                     target="_blank"
+<<<<<<< HEAD
                     rel="noopener noreferrer"
                     className="flex-1 text-center bg-orange-500 text-white py-3 rounded-xl font-semibold hover:bg-orange-600 transition"
+=======
+                    rel="noreferrer"
+                    className="flex-1 text-center bg-orange-500 text-white py-3 rounded-xl font-semibold hover:bg-orange-600"
+>>>>>>> a8b75d03ab7250ef76a89e32c6b1bf1a9e1f6c96
                   >
                     View Project
                   </a>
@@ -173,5 +232,9 @@ function Projects() {
   );
 }
 
+<<<<<<< HEAD
 export default Projects;
 
+=======
+export default Projects;
+>>>>>>> a8b75d03ab7250ef76a89e32c6b1bf1a9e1f6c96
